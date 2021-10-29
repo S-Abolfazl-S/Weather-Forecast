@@ -9,6 +9,7 @@
         @import url('files/style.css');
     </style>
     <link href="source\fontawesome\css\all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="source\jquery-3.6.0.min.js"></script>
     <title>Weather Forecast</title>
 </head>
@@ -19,21 +20,33 @@
         <div id="head">
             <h1>Weather Forecast</h1>
             <div id="searchBox">
-                <input type="text" placeholder="city name">
-                <button id="searchBtn"><i class="fa fa-search"></i></button>
+                <input class="btn-light" type="text" placeholder="city name">
+                <button id="searchBtn" class="btn btn-light btn-circle btn-xl">
+                    <i class="fa fa-search"></i>
+                </button>
             </div>
         </div>
         <nav>
             <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">about us</a></li>
+                <li><a href="#" class="btn btn-outline-light fs-4">home</a></li>
+                <li><a href="#" class="btn btn-outline-light fs-4">about us</a></li>
             </ul>
         </nav>
     </Header>
     <!-- ######################### End-Header ######################### -->
     <!-- ######################### Start-Content ######################### -->
     <Main>
-
+        <div id="info">
+            <h1 id="cityName">city name</h1>
+            <div class="content">
+                <p>
+                    <i class="fas fa-sun"></i>
+                    <span>city,</span>
+                    <span>country</span>
+                    <span>12.2 c</span>
+                </p>
+            </div>
+        </div>
     </Main>
     <!-- ######################### End-Content ######################### -->
     <!-- ######################### Start-Footer ######################### -->

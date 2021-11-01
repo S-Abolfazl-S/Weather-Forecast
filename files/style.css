@@ -141,6 +141,7 @@ main>#info{
     justify-content: center;
     border-radius: 10px;
     padding: 10px;
+    margin: 5px 0;
 } 
 #info>.icon{ 
     width: 20%; 
@@ -200,8 +201,7 @@ footer{
     /*  */
     display: flex;
     flex-direction: row;
-    padding: 5px;
-    
+    padding: 5px; 
 }
 
 footer>section{
@@ -215,6 +215,7 @@ footer>section{
 @media screen and (max-width: 700px){
     footer{
         flex-direction: column;
+        padding-bottom: 20px;
     }
     footer>section{
         width: 100%;
@@ -225,10 +226,9 @@ footer>section{
         padding: 5px;
     }
     footer>section.information{
+        margin: 10px 0;
         order:1;
-    }
-
-    
+    } 
 }   
                                 /* social-media */
 footer>section.social-media{ 

@@ -18,12 +18,18 @@
     <!-- ######################### Start-Header ######################### -->
     <Header>
         <div id="head">
-            <h1>Weather Forecast</h1>
+            <h1>
+                <span class="fas fa-cloud-rain"></span>
+                Weather Forecast
+                <span class="fas fa-sun"></span>
+            </h1>
             <div id="searchBox">
-                <input class="btn-light" type="text" placeholder="city name">
-                <button id="searchBtn" class="btn btn-light btn-circle btn-xl">
-                    <i class="fa fa-search"></i>
-                </button>
+                <form action="#" method="get">
+                    <input id="getCity" class="btn-light" type="text" placeholder="city name">
+                    <button id="searchBtn" class="btn btn-light btn-circle btn-xl">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
             </div>
         </div>
         <nav>
@@ -37,18 +43,36 @@
     <!-- ######################### Start-Content ######################### -->
     <Main>
         <div id="info">
-            <div class="icon"><span class="fas fa-sun"></span></div>
+            <div class="icon">
+                <span class="fas fa-sun"></span>
+            </div>
             <div class="content">
                 <span>city</span>
                 <span>country</span>
-                <span>12.2c</span>
+                <span><span class="fas fa-temperature-high"></span></span>
             </div>
         </div>
     </Main>
     <!-- ######################### End-Content ######################### -->
     <!-- ######################### Start-Footer ######################### -->
     <footer>
-
+        <section class="social-media">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </section>
+        <section class="information">
+            <h4>this website is weather forecast you can search place and get information weather</h4>
+            <h6>@copy-right 2021</h6>
+        </section>
+        <section class="links">
+            <ul>
+                <li><a href="#">company</a></li>
+                <li><a href="#">contact us</a></li>
+                <li><a href="#">about us</a></li>
+            </ul>
+        </section>
     </footer>
     <!-- ######################### End-Footer ######################### -->
     <!-- Script-Js -->

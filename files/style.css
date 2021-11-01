@@ -5,11 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    /* background-image: url(../images/wp4340126-spring-summer-autumn-winter-wallpapers.jpg); */
     background: linear-gradient(90deg, rgba(254,140,0,1) 0%, rgba(248,54,0,1) 74%); 
-    /* background-repeat: repeat-y; */
-    /* background-attachment: fixed; */
-    /* background-size: 100% ; */
     padding: 10px;
 }
 /* ######################### Start-Header ######################### */ 
@@ -17,28 +13,35 @@ header{
     width: 100%;
     height: auto; 
     background-color: none; 
-    /* padding: 10px 10px 0 10px; */
     display: flex;
     justify-content: space-evenly;
     flex-direction: column; 
-}
-
+    background-color: rgba(255, 255, 255, .3);
+    padding: 10px 0;
+    border-radius: 10px;
+} 
 header>#head>h1{
-    text-align: center;
-    text-shadow: 0 0 5px black;
+    text-align: center; 
     color:white;
     text-transform: capitalize;
     font-size: 50pt; 
     margin-bottom: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
 }
 header>#head>#searchBox{
     width: 50%; 
     margin: auto; 
     display: flex; 
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 } 
-#searchBox>input{
+#searchBox>form{
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    padding: 0 5px; 
+}
+
+#searchBox>form>input{
     width: 70%;
     height: 30px; 
     outline: none;
@@ -51,8 +54,7 @@ header>#head>#searchBox{
     font-size: 20px; 
 } 
 
-#searchBox>#searchBtn{
-    /* width: 10%; */
+#searchBox>form>#searchBtn{ 
     margin: auto;
     margin-left: 0; 
     padding: 7px 10px 5px 10px;
@@ -61,14 +63,14 @@ header>#head>#searchBox{
     border-radius: 5px;
     outline: none; 
 }
-#searchBox>#searchBtn:hover{ 
+#searchBox>form>#searchBtn:hover{ 
     cursor: pointer; 
 } 
 nav{
     width: 100%;
     height: auto; 
     border-radius: 10px; 
-    margin: 0;
+    margin: 10px 0 0 0 ; 
 }
 nav>ul{
     width: 100%; 
@@ -77,9 +79,9 @@ nav>ul{
     flex-wrap: wrap;
     justify-content: center;
     padding: 5px; 
-    margin-bottom: 0;
-
+    margin-bottom: 0; 
 } 
+
 nav>ul>li{ 
     width: 150px;
     height: 100%; 
@@ -96,19 +98,37 @@ nav>ul>li>a{
 } 
 
 /* end-navbar */
+@media screen and (max-width: 450px){
+    #searchBox{
+        width: 100% !important; 
+        height: auto;
+        margin: 0; 
+    } 
+    #searchBox>form{
+        width: inherit;  
+        flex-direction: column;
+    }
+    #searchBox>form *{
+        margin: 5px 0 !important;
+        width: 100% !important;
+    }
+}
 /* ######################### End-Header ######################### */
 /* ######################### Start-Content ######################### */
 main{
     width: 100%; 
+    height: 50vh;
     text-transform: capitalize;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     display: flex;
     justify-content: center;
+    align-items: center; 
 }
 
 main>#info{
     border-radius: 5px;
     width: 90%; 
+    height: auto;
     background-color: #fff;
     /*  */
     display: flex;
@@ -135,22 +155,22 @@ main>#info{
 #info>.icon>span{ 
     width: 100%; 
     font-size: 5em; 
-    /* background-color: yellow; */
-}
+} 
+
 #info>.content>span{
     width: 34%;
     height: 100%;
     font-size: 2em;
     font-weight: bold;
-    /* background-color: aqua; */
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 700px){
     #info>.icon{ 
         width: 50%; 
+        margin-right: 5px;
     } 
     #info>.icon>span{ 
-        height: 100%;
+        height: 50%;
         font-size: 7em; 
     } 
     #info>.content{ 
@@ -159,6 +179,7 @@ main>#info{
     #info>.content>span{
         width: 100%;
         height: 34%; 
+        font-size: 1.5em;
     }
     #info>.content>span:not(:last-child){ 
         border-bottom: 1px solid black;
@@ -166,4 +187,106 @@ main>#info{
 }
 /* ######################### End-Content ######################### */
 /* ######################### Start-Footer ######################### */
+footer{
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    background-color: rgba(255, 255, 255, .3);
+    /*  */
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    
+}
+
+footer>section{
+    width: 34%;
+    height: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+@media screen and (max-width: 700px){
+    footer{
+        flex-direction: column;
+    }
+    footer>section{
+        width: 100%;
+        height: 34%; 
+    }
+    footer>section{
+        /* border-bottom: 1px solid black; */
+        padding: 5px;
+    }
+    footer>section.information{
+        order:1;
+    }
+
+    
+}   
+                                /* social-media */
+footer>section.social-media{ 
+    display: flex; 
+} 
+
+footer>section.social-media>a{ 
+    margin-right: 20px;
+    /* border: 1px solid black; */ 
+}
+footer>section.social-media>a>i{ 
+    font-size: 2.5em;
+    color:white;
+}
+footer>section.social-media>a>i:hover{ 
+    color: black;
+}
+                                /* social-media */
+                                /* information */
+footer>section.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+footer>section.information *{
+    width: 100%; 
+    text-align: justify; 
+}
+footer>section.information H4::first-letter{
+    text-transform: uppercase;
+}
+footer>section.information H6{
+    text-transform: capitalize;
+    text-align: center; 
+    margin-bottom: 0;
+}
+                                /* information */
+                                /* links */
+
+footer>section.links>ul{
+    width: 100%;
+    height: 100%; 
+    list-style-type: none;  
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+footer>section.links>ul>li{
+    width: 100%; 
+    text-align: center;
+} 
+footer>section.links>ul>li>a:hover{
+    color: white;
+}
+footer>section.links>ul>li>a{ 
+    text-transform: capitalize; 
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    
+}
+
+                             /* links */ 
 /* ######################### End-Footer ######################### */

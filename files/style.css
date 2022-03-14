@@ -174,10 +174,18 @@ main>#info{
     #info>.icon{ 
         width: 50%; 
         margin-right: 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     } 
     #info>.icon>span{ 
         height: 50%;
         font-size: 7em; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     } 
     #info>.content{ 
         flex-direction: column;

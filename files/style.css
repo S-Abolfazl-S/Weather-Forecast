@@ -102,6 +102,10 @@ nav>ul>li>a{
     margin: auto; 
 } 
 
+nav>ul>li:nth-child(1){
+    margin-right: 10px;
+}
+
 /* end-navbar */
 @media screen and (max-width: 450px){
     #searchBox{
